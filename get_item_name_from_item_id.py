@@ -9,7 +9,7 @@ for filename in file_list:
     items = open(item_file, 'r').read().split()
 
     for name in items:
-        url = f'https://gameinfo.albiononline.com/api/gameinfo/items/{name}/data'
+        url = f'https://gameinfo-sgp.albiononline.com/api/gameinfo/items/{name}/data'
         with requests.get(url) as response:
             if response.status_code == 200:
                 value = response.json()['localizedNames']['EN-US']

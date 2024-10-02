@@ -1,0 +1,1 @@
+https://east.albion-online-data.com/api/v2/stats/prices/

@@ -1,12 +1,13 @@
-import requests
+import requests 
 from tkinter import *
 from datainfo import (
     city_list, file_list, client_version, client_title, quality_list
 )
-from id_to_name import id_to_name
+# from id_to_name import id_to_name
+from idname import id_to_name
 
 
-data_route = 'https://www.albion-online-data.com/api/v2/stats/prices/'
+data_route = 'https://east.albion-online-data.com/api/v2/stats/prices/'
 tax = 0.06
 
 
@@ -83,7 +84,6 @@ def cmd_search():
             enchant = ''
             translated_name = _id
             
-
         name = f'{tier}.{enchant} {translated_name}, {quality}'
 
         item_id = item[0].split('#')[0]
@@ -108,7 +108,7 @@ def cmd_search():
 
 gui = Tk()
 gui.title(client_title)
-gui.geometry('800x500')
+gui.geometry('800x800')
 
 
 scrollbar = Scrollbar(gui)
